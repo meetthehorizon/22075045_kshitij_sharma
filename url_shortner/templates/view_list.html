@@ -1,0 +1,26 @@
+{% extends 'base.html' %} {% block content %}
+<div class="container mt-5">
+  <!-- Add top margin -->
+  <table class="table table-striped">
+    <!-- Add Bootstrap table classes -->
+    <thead>
+      <tr>
+        <th>Original URL</th>
+        <th>Shortened URL</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for url in url_list %}
+      <tr>
+        <td>{{ url.long_url }}</td>
+        <td>
+          <a href="http://127.0.0.1:8000/{{ url.short_url }}"
+            >{{ url.short_url }}</a
+          >
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock content %}

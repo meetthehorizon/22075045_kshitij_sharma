@@ -1,0 +1,11 @@
+{% extends 'base.html' %} {% block content %}
+<div class="container text-center mt-5">
+  <!-- Center content and add top margin -->
+  <div>
+    <h2>
+      Shortened URL: <a href="http://127.0.0.1:8000/{{ chars }}">{{ chars }}</a>
+    </h2>
+    <!-- Wrap the URL in an anchor tag for better user experience -->
+  </div>
+</div>
+{% endblock content %}
